@@ -41,6 +41,13 @@ namespace A_Deck
                 var total_commands = ReadInt();
                 var max_size = ReadInt();
 
+                Solve(total_commands, max_size);
+
+                CloseStreams();
+            }
+
+            private static void Solve(int total_commands, int max_size)
+            {
                 Deck myDeck = new Deck(max_size);
                 for (int i = 0; i < total_commands; i++)
                 {
@@ -86,8 +93,6 @@ namespace A_Deck
                         }
                     }
                 }
-
-                CloseStreams();
             }
 
             private static void CloseStreams()
